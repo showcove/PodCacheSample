@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,7 +56,7 @@
 		694FFD9B2688105300C21E03 /* PodCacheSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodCacheSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		694FFD9F2688105300C21E03 /* PodCacheSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodCacheSampleUITests.swift; sourceTree = "<group>"; };
 		694FFDA12688105300C21E03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		694FFDAD2688157000C21E03 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; };
+		694FFDAD2688157000C21E03 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6E322CBE90F242CE08499006 /* Pods-PodCacheSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodCacheSampleTests.release.xcconfig"; path = "Target Support Files/Pods-PodCacheSampleTests/Pods-PodCacheSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		C2E97A1EFE5E20D8C763D281 /* Pods-PodCacheSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodCacheSample.release.xcconfig"; path = "Target Support Files/Pods-PodCacheSample/Pods-PodCacheSample.release.xcconfig"; sourceTree = "<group>"; };
 		E9BC8C396983DF28187CC06B /* Pods-PodCacheSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodCacheSample.debug.xcconfig"; path = "Target Support Files/Pods-PodCacheSample/Pods-PodCacheSample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,7 +102,6 @@
 				00DDCE2486D5B0495E1B30C2 /* Pods-PodCacheSampleTests.debug.xcconfig */,
 				6E322CBE90F242CE08499006 /* Pods-PodCacheSampleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -183,7 +182,7 @@
 				694FFD772688105200C21E03 /* Frameworks */,
 				694FFD782688105200C21E03 /* Resources */,
 				ED954F200350E6CBBA4CA53E /* [CP] Embed Pods Frameworks */,
-				B393CFD891C3C52BBF5045D6 /* [CP] Copy Pods Resources */,
+				6F51AB41580FDFDF7571A9BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,7 +221,7 @@
 				694FFD982688105300C21E03 /* Frameworks */,
 				694FFD992688105300C21E03 /* Resources */,
 				8D468D80A95A7BA8F13FAAAA /* [CP] Embed Pods Frameworks */,
-				38E894AC07247B47A2CFEFB4 /* [CP] Copy Pods Resources */,
+				C36025810613E71B70268F3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,23 +303,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		38E894AC07247B47A2CFEFB4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PodCacheSample-PodCacheSampleUITests/Pods-PodCacheSample-PodCacheSampleUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PodCacheSample-PodCacheSampleUITests/Pods-PodCacheSample-PodCacheSampleUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PodCacheSample-PodCacheSampleUITests/Pods-PodCacheSample-PodCacheSampleUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		494142E10CF309DE8943AADB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +347,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6F51AB41580FDFDF7571A9BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PodCacheSample/Pods-PodCacheSample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PodCacheSample/Pods-PodCacheSample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PodCacheSample/Pods-PodCacheSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8D468D80A95A7BA8F13FAAAA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -404,21 +403,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B393CFD891C3C52BBF5045D6 /* [CP] Copy Pods Resources */ = {
+		C36025810613E71B70268F3F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PodCacheSample/Pods-PodCacheSample-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PodCacheSample-PodCacheSampleUITests/Pods-PodCacheSample-PodCacheSampleUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PodCacheSample/Pods-PodCacheSample-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PodCacheSample-PodCacheSampleUITests/Pods-PodCacheSample-PodCacheSampleUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PodCacheSample/Pods-PodCacheSample-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PodCacheSample-PodCacheSampleUITests/Pods-PodCacheSample-PodCacheSampleUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ED954F200350E6CBBA4CA53E /* [CP] Embed Pods Frameworks */ = {
