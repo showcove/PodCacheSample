@@ -16,7 +16,6 @@ target 'PodCacheSample' do
   pod 'SVProgressHUD', :binary => true
   pod 'MJRefresh', :binary => true
   pod 'CocoaLumberjack', :binary => true
-  pod 'Realm', :binary => true
   pod 'SnapKit', :binary => true
   pod 'Kingfisher', :binary => true
   
